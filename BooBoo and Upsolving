@@ -1,0 +1,47 @@
+import math
+
+def isCorrect(mid, a, N, M):
+    p=1
+    curr = mid
+    for i in range(N-1):
+        if((curr-a[i])>=a[i+1]):
+            curr = curr-a[i]
+        else:
+            p += 1
+            curr = mid
+        
+        if(curr==0):
+            p += 1
+            curr=mid
+            
+    return p<=M    
+            
+
+in_ = input().split(" ")
+
+N = int(in_[0])
+M = int(in_[1])
+
+
+temp = list(map(int, (input().split(" "))))
+min_ = max(temp)
+max_= sum(temp)
+
+if(N==M):
+    print(min_)
+elif(M==1):
+    print(max_)
+else:
+    l = min_
+    r = max_
+    mid=l
+    while (l<=r):
+        mid = (l+r)//2
+        
+        if(isCorrect(mid, temp, N, M)):
+            r = mid-1
+        else:
+            l = mid+1
+        
+    print(l)
+        
