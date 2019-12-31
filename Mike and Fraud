@@ -1,0 +1,44 @@
+
+# Find all pairs [l, r] such that product of all integers in range a[l]...a[r] both included is divisible
+# by d 
+# Then all subarrays contain this pair is divisible by d also
+
+N, d = map(int, input().split(" "))
+
+a = list(map(int, input().split(" ")))
+
+factors = []
+l = 0
+r = 0
+prod = 1
+
+while(r<N):
+    while(r<N)&(prod!=0):
+        prod = prod*a[r]
+        prod = prod%d
+        r += 1
+    if(r==N)*(prod!=0):
+        break
+    r -= 1 
+    if(prod==0):
+        l = r
+        prod=1
+        while(prod!=0):
+            prod = prod*a[l]
+            prod = prod%d
+            l -= 1
+        l += 1
+        factors.append([l,r])
+    r = l+1
+    prod = 1
+    
+m = len(factors)  
+if(m==0):
+    exit(print("0"))
+count=0    
+for i in range(m-1):
+    count += (factors[i][0]+1)*(factors[i+1][1]-factors[i][1])
+  
+count += (factors[m-1][0]+1)*(N-factors[m-1][1])
+    
+print(count)
