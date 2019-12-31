@@ -1,0 +1,16 @@
+Mike Ross is a fraud!. That's what the world says. However, Harvey is highly disagreeable to this, and feels that Mike did what he had to, only for the good of the world.
+
+Tired of constant criticism, Harvey decides to prove to the world, what a great friend he is. Travis Tanner, being his Biggest competitor, challenges him to the following task :
+
+Given an array A of size N and an integer K, can you find the number of good sub-arrays of this array? A sub-array is a contiguous subsequence of an array, and is considered to be good, if the product of all integers it contains is divisible by K.
+
+Harvey is completely bowled over by the difficulty of this task, as he is not a very math oriented person, and needs your help urgently. Can you find the answer ?
+
+
+SAMPLE INPUT 
+6 2
+1 2 3 4 5 6
+SAMPLE OUTPUT 
+18
+Explanation
+The subarray from 2 to 3 is one of the subarrays divisble by 6, as 2*3=6, and 6 is divisible by 6.
