@@ -1,0 +1,27 @@
+Ross is bored at the moment, so he decides to draw triangles. He starts by drawing an equilateral triangle on a piece of paper.Then he performs a set of moves. In the ith move he takes all the uncoloured triangles, divides each of them in 4 parts of equal areas and colour the central part. Also, he keeps on counting the total number of triangles after each move.
+
+Given Q queries. For each query, given an integer N, and you have to count the total number of triangles after the Nth move. Since the answer can be very large output it modulo 109 + 7.
+
+Input
+
+First line consists of an integer Q denoting the number of queries.
+Each of the next Q lines consists of an integer N.
+
+Output
+
+Output Q lines, in each line denoting the answer for each query.
+
+Constraints
+
+1<=N,Q<=1000000
+
+SAMPLE INPUT 
+2
+1
+2
+SAMPLE OUTPUT 
+5
+17
+Explanation
+Number of triangles in figure 2 : 5
+Number of triangles in figure 3 : 17
